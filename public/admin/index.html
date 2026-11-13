@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Painel Auto Vale</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <section id="login-view" class="login" hidden>
+    <form id="login-form" class="card">
+      <h1>Painel <span>Auto Vale</span></h1>
+      <label>Usuário<input name="username" autocomplete="username" required></label>
+      <label>Senha<input name="password" type="password" autocomplete="current-password" required></label>
+      <button class="btn" type="submit">Entrar</button>
+      <p class="message" id="login-message" role="alert"></p>
+    </form>
+  </section>
+
+  <section id="panel-view" hidden>
+    <header class="topbar">
+      <strong>Painel <span>Auto Vale</span></strong>
+      <div>
+        <a href="/" target="_blank" rel="noopener">Ver site</a>
+        <button id="logout-button" class="btn btn--ghost" type="button">Sair</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="card">
+        <div class="list-head">
+          <h2>Veículos</h2>
+          <button id="new-button" class="btn" type="button">+ Novo veículo</button>
+        </div>
+        <ul id="vehicle-list" class="vehicle-list"></ul>
+      </section>
+
+      <form id="vehicle-form" class="card" novalidate>
+        <h2 id="form-title">Novo veículo</h2>
+        <label>Nome<input name="name" maxlength="60" required></label>
+        <div class="row">
+          <label>Categoria<input name="category" maxlength="30" list="categories" required></label>
+          <label>Ano<input name="year" type="number" min="1980" required></label>
+          <label>Km<input name="mileageKm" type="number" min="0" required></label>
+        </div>
+        <datalist id="categories">
+          <option value="Compacto"><option value="Hatch"><option value="Sedan"><option value="SUV"><option value="Picape"><option value="Minivan">
+        </datalist>
+        <label>Descrição<textarea name="description" rows="4" maxlength="600"></textarea></label>
+        <label class="check"><input type="checkbox" name="isAvailable" checked> Disponível para locação</label>
+        <label>Foto (JPG, PNG ou WebP, até 5 MB)<input name="photo" type="file" accept="image/jpeg,image/png,image/webp"></label>
+        <img id="photo-preview" class="preview" alt="Pré-visualização da foto" hidden>
+        <div class="actions">
+          <button class="btn" type="submit">Salvar</button>
+          <button id="delete-button" class="btn btn--danger" type="button" hidden>Excluir</button>
+        </div>
+        <p class="message" id="form-message" role="status"></p>
+      </form>
+    </main>
+  </section>
+
+  <script src="admin.js"></script>
+</body>
+</html>

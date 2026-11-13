@@ -1,0 +1,12 @@
+{
+  "name": "auto-vale-locadora",
+  "version": "1.0.0",
+  "private": true,
+  "engines": { "node": ">=20.6" },
+  "scripts": { "start": "node --env-file=.env server.js" },
+  "dependencies": {
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "multer": "^2.0.0"
+  }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auto Vale Locadora | Aluguel de veículos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="brand" href="#">Auto<span>Vale</span></a>
+      <nav class="nav">
+        <a href="#frota">Frota</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="banner">
+    <img src="images/banner.jpg" width="2048" height="768" alt="Auto Vale Locadora">
+  </section>
+
+  <div class="container">
+    <h1 class="visually-hidden">Auto Vale Locadora: aluguel de veículos</h1>
+    <form class="search" id="search-form" autocomplete="off">
+      <div class="field">
+        <label for="search-text">Buscar veículo</label>
+        <input id="search-text" type="search" maxlength="60" placeholder="Ex.: Corolla, Strada...">
+      </div>
+      <div class="field">
+        <label for="search-category">Categoria</label>
+        <select id="search-category"><option value="">Todas</option></select>
+      </div>
+      <label class="check">
+        <input id="search-available" type="checkbox"> Somente disponíveis
+      </label>
+    </form>
+  </div>
+
+  <main class="container" id="frota">
+    <h2 class="section-title">Nossa frota</h2>
+    <p class="section-subtitle">Veículos organizados do mais novo para o mais antigo, com ano e quilometragem informados em cada modelo.</p>
+    <p class="result-count" id="result-count" aria-live="polite"></p>
+    <section class="vehicle-grid" id="vehicle-grid" aria-label="Frota de veículos"></section>
+  </main>
+
+  <footer class="site-footer" id="contato">
+    <div class="container footer-grid">
+      <div class="footer-info">
+        <p class="footer-eyebrow">Atendimento</p>
+        <p class="footer-title">Reserve o seu veículo com a Auto Vale</p>
+        <p class="footer-text">Escolha o veículo na nossa frota e fale com a equipe pelo WhatsApp para fazer a sua reserva.</p>
+        <div class="social-links">
+          <a class="social-link social-link--primary" id="social-whatsapp" href="#" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 21l1.6-4.6A9 9 0 1 1 8 19.6L3 21z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1.3-1.6-2.3-1.2-1 .8c-1-.4-2-1.4-2.4-2.4l.8-1L10.7 7.2 9 8.5z" fill="currentColor" stroke="none"/></svg>
+            Falar no WhatsApp
+          </a>
+          <a class="social-link" id="social-instagram" href="#" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            Seguir no Instagram
+          </a>
+        </div>
+      </div>
+
+      <figure class="sticker">
+       <img src="images/adesivo.jpg" width="640" height="640" loading="lazy" alt="Adesivo de identificação dos veículos da Auto Vale">
+        <figcaption>Adesivo de identificação dos veículos</figcaption>
+      </figure>
+    </div>
+
+    <div class="container footer-bottom">
+      <p class="copyright">© Auto Vale Locadora. Todos os direitos reservados.</p>
+      <a class="back-to-top" href="#">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
